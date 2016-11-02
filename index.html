@@ -98,24 +98,39 @@
     </dl>
       </article>
     <article>
-            <h1><b><i>Форма добавления новых книг и фильмов</i></b></h1>
+            <h1><b><i>Форма добавления новых книг и фильмов:</i></b></h1>
         <form action="/new/knigafilm" method="PUT">
-            <label for="cover">Тип издания</label>
+            <label for="cover">Тип издания: </label>
             <select id="cover" name="cover">
                 <option>Книга</option>
                 <option>Фильм</option>
             </select><br>
-            <label for="title">Название</label>
-            <input name="title" value=""><br>
-            <label for="author">Автор</label>
+            <label for="title">Название: </label>
+            <input placeholder="Название книги/фильма" name="title" value=""><br>
+            <label for="author">Автор: </label>
             <input name="author" value=""><br>
-            <label for="date">Дата выпуска</label>
+            <label for="date">Дата выпуска: </label>
             <input id="date" name="date" type="date" value="" max="01.01.2016"><br>
-            <button type="submit">Отправить</button>
+            <label for="country">Страна:</label>
+            <input placeholder="Страна выпуска" name="country" value=""><br>
             <label for="language">Язык:</label>
             <input id="language" name="language" type="radio" value="English">English
             <input name="language" type="radio" value="Русский">Русский
-            <input name="language" type="radio" value="Другой">Другой
+            <input name="language" type="radio" value="Другой">Другой<br>
+            <label for="url">Страница автора: </label>
+            <input placeholder="http://www.autor-a-dog.ru" id="url" name="url" type="url" value=""><br>
+            <label for="email">Почта автора: </label>
+            <input placeholder="автор@пёс.лох" id="email" name="email" type="email"><br>
+            <label for="format">Формат файла:</label>
+            <input name="format" value=""><br>
+            <label for="cover">Добавьте здесь обложку</label>
+            <input id="cover" name="cover" type="cover" value="" accept="image/jpeg, image/png, image/gif"><br>
+            <label for="file">Добавьте здесь файл книги/фильма</label>
+            <input id="file" name="file" type="file" value="" accept="text/pdf, text/doc, text/docx, video/ogg, video/mp4, video/avi"><br>
+            <label for="descriptiom">Описание: </label>
+            <textarea id="description" name="descriptiom"></textarea><br>
+            <br>
+            <button type="submit">Отправить </button> <button type="reset">Очистить</button>
         </form>
     </article>
 </html>
